@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block content%}
+{% load crispy_forms_tags %}
+{% load static %}
+    <h2 class="text-center">Registration Form</h2> <br>
+    {% if messages %}
+    {% for message in messages %}
+    <span class="btn btn-primary col-md-3 col-md-offset-5">{{message}}</span>
+    {% endfor %}
+    {% endif %} 
+    <form action="" method="POST" class="col-md-5 col-md-offset-4">
+        {% csrf_token %}
+        {{phone}} 
+        {{ form|crispy }} <br>
+        <input type="submit" class="btn btn-success offset-4" value="Register">
+        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+    </form>
+
+    <script src="{% static 'enroll/js/bootstrap.js' %}"></script>
+    <script src="{% static 'enroll/js/jquery.js' %}"></script>
+    <script src="{% static 'enroll/js/popper.js' %}"></script>
+{%endblock%}
+</html>

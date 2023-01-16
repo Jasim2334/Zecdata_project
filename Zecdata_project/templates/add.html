@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center alert alert-info">Welcome {{fname}}</h2>
+<h3 class="text-center alert alert-warning col-md-7 col-md-offset-3">Add New Habit</h3>
+{% if messages %}
+{% for message in messages %}
+<span class="text-center btn btn-success col-md-4 col-md-offset-5">{{message}}</span>
+{% endfor %}
+{% endif %}
+<form action="" method="POST" class="col-md-5 col-md-offset-4">
+    {%csrf_token%}
+    {{form.as_p}}
+    <div align="center">
+        <input type="submit" value="Add Habit" class="btn btn-success">
+    </div>
+</form>
+{%endblock%}

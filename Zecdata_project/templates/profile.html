@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center alert alert-success">User Profiles</h2>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{fname}} {{lname}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> <br>
+<h3 class="text-center alert alert-info">List of Habits created by this user</h3>
+{% if data %}
+{%for d in data%}
+<div class="container ">
+    <ol style="font-weight: bold;">
+        <li>{{d.habit1}}</li>
+        <li>{{d.habit2}}</li>
+        <li>{{d.habit3}}</li>
+        <li>{{d.habit4}}</li>
+        <li>{{d.habit5}}</li>
+    </ol>
+</div>
+{%endfor%} <br>
+{%else%}
+<div class="col-md-4 col-md-offset-4">
+    <h3 class="text-center alert alert-danger">No Habit Available</h3>
+</div> {%endif%} <br>
+{% endblock%}
