@@ -27,7 +27,7 @@ class signupForm(UserCreationForm):
 class HabitForm(forms.ModelForm):
     class Meta:
         model = HabitModel
-        fields = ['user','habit1','habit2','habit3','habit4','habit5']
+        fields = ['habit1','habit2','habit3','habit4','habit5']
         widgets = {
             'habit1': forms.TextInput(attrs={'class': 'form-control'}),
             'habit2': forms.TextInput(attrs={'class': 'form-control'}),
