@@ -5,7 +5,7 @@ from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 
 
-class HabitApi(viewsets.ModelViewSet):
+class HabitApi(viewsets.ReadOnlyModelViewSet):
     queryset = HabitModel.objects.all()
     serializer_class = HabitSerializer
     authentication_classes = [SessionAuthentication]

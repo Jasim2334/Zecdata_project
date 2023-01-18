@@ -1,34 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<style>
+    .CBU{
+        font-size: x-large;
+    }
+</style>
 
 <h3 class="text-center alert alert-info">All Users Habit Information</h3>
-<div class="col-md-6 col-md-offset-3" >
+<div class="cul-md-3 cul-md-offset-3">
     {% if data %}
-    <table class="table">
-        <thead >
-            <tr>
-                <th scope="col">Created_By</th>
-                <th scope="col">Habit1</th>
-                <th scope="col">Habit2</th>
-                <th scope="col">Habit3</th>
-                <th scope="col">Habit4</th>
-                <th scope="col">Habit5</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for d in data %}
-            <tr>
-                <td>{{d.user}}</td>
-                <td>{{d.habit1}}</td>
-                <td>{{d.habit2}}</td>
-                <td>{{d.habit3}}</td>
-                <td>{{d.habit4}}</td>
-                <td>{{d.habit5}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <ul>
+        {%for d in data%}
+        <li class="CBU">Created By : {{d.user}}</li> 
+        <li>Habit1 : {{d.habit1}}</li> 
+        <li>Habit2 : {{d.habit2}}</li>
+        <li>Habit3 : {{d.habit3}}</li>
+        <li>Habit4 : {{d.habit4}}</li>
+        <li>Habit5 : {{d.habit5}}</li> <br>
+        {%endfor%}
+    </ul>
     {% else %}
     <h3 class="text-center alert alert-danger">No Habit Available</h3>
     {% endif %}
