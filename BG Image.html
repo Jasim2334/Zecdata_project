@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <title>background Image</title>
+    <style>
+        body {
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            /* background-image: url(images/background-desktop.jpg); */
+        }
+
+        .jumbotron {
+            background-color: transparent;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h4 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        b {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+
+        @media (max-width: 480px) {
+            body {
+                background-image: url("./BG.png");
+            }
+        }
+
+        @media (min-width: 1025px) {
+            body {
+                background-image: url("./BG.png");
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 1024px) {
+            body {
+                background-image: url("./BG.png");
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>ZEC Data</h1>
+            <h3>A Habits application in which a user can Add habits and can see habits
+                of Other users.</h3>
+            <hr>
+        </div>
+        <div class="container">
+            <ul>
+                <li>
+                    <h4>A habit cannot be tossed out the window; it must be coaxed down the stairs a step at a time. -
+                        <b>Mark Twain</b>
+                    </h4>
+                </li>
+                <li>
+                    <h4>And once you understand that habits can change, you have the freedom and the responsibility to
+                        remake them. - <b>Charles Duhigg</b></h4>
+                </li>
+                <li>
+                    <h4>Discipline is choosing between what you want now and what you want most. - <b>Abraham
+                            Lincoln</b>
+                </li>
+                <li>
+                    <h4>Feeling sorry for yourself, and your present condition is not only a waste of energy but the
+                        worst habit you could possibly have. - <b>Dale Carnegie</b></h4>
+                </li>
+                <li>
+                    <h4>Drop by drop is the water pot filled. - <b>Buddha</b></h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
