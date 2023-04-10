@@ -126,3 +126,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'mdj2334@gmail.com'
+EMAIL_HOST_PASSWORD = 'vyvujzppwgrgwwah'
+EMAIL_USE_TLS = True
+
+import django
+from django.utils.encoding import force_str
+django.utils.encoding.force_text = force_str

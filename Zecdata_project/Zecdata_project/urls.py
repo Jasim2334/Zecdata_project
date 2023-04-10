@@ -27,5 +27,7 @@ urlpatterns = [
     path('profile/',views.profile,name="profile"),
     path('home/',views.home,name="home"),
     path('api/',include('habit_app.api.urls')),
+    path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', 
+        views.activate, name='activate'), 
     path('auth/',include('rest_framework.urls',namespace='rest_framework')),
 ]

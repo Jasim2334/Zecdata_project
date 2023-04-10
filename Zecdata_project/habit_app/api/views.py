@@ -10,3 +10,7 @@ class HabitApi(viewsets.ReadOnlyModelViewSet):
     serializer_class = HabitSerializer
     authentication_classes = [SessionAuthentication]
     permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        return HabitModel.objects.filter(user=user)

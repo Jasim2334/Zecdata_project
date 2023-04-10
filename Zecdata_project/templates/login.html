@@ -3,15 +3,33 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {%block content%}
-    <h2 class="text-center">Login Form</h2> <br>
-    <form action="" method="post" class="col-md-5 col-md-offset-4">
-        {% csrf_token %}
-        {{form|crispy}} <br>
-        <input type="submit" class="btn btn-success offset-4" value="Login">
-        <a href="{% url 'signup'%}" class="btn btn-info">Signup</a>
-    </form>
-    <script src="{% static 'enroll/js/bootstrap.js' %}"></script>
-    <script src="{% static 'enroll/js/jquery.js' %}"></script>
-    <script src="{% static 'enroll/js/popper.js' %}"></script>
+<h2 class="text-center">Login Form</h2> <br>
+<form action="" method="post" class="col-md-5 col-md-offset-4">
+    {% csrf_token %}
+    {{form|crispy}} <br>
+    <input type="submit" class="btn btn-success offset-4" value="Login">
+    <a href="{% url 'signup'%}" class="btn btn-info">Signup</a>
+</form>
+{%for message in messages%}
+{%if message.tags == 'warning' %}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    var m = "{{message}}";
+    swal("Perfect!", m, "success")
+</script>
+{%endif%}
+{%endfor%}
+{%for message in messages%}
+{%if message.tags == 'success' %}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    var m = "{{message}}";
+    swal("Perfect!", m, "success")
+</script>
+{%endif%}
+{%endfor%}
+<script src="{% static 'enroll/js/bootstrap.js' %}"></script>
+<script src="{% static 'enroll/js/jquery.js' %}"></script>
+<script src="{% static 'enroll/js/popper.js' %}"></script>
 
 {%endblock%}
