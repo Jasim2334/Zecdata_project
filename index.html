@@ -1,40 +1,11 @@
-{% extends 'base.html' %}
-{% block content %}
-
-<h2 class="text-center alert alert-info">Home</h2>
-
-<div class="col-md-6 col-md-offset-3">
-    <h3 class="text-center alert alert-success ">All Users Habit Information</h3>
-    {% if data %}
-    <table class="table"> <br>
-        <thead>
-            <tr align="center">
-              <th scope="col">Habit1</th>
-              <th scope="col">Habit2</th>
-              <th scope="col">Habit3</th>
-              <th scope="col">Habit4</th>
-              <th scope="col">Habit5</th>
-            </tr>
-          </thead>
-        <tbody align="center">
-            {% for d in data %}
-            <tr>
-                <td>{{d.habit1}}</td>
-                <td>{{d.habit2}}</td>
-                <td>{{d.habit3}}</td>
-                <td>{{d.habit4}}</td>
-                <td>{{d.habit5}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <div class="col-md-6 col-md-offset-3">
-        <h3 class="text-center alert alert-danger">No Habit Available</h3>
-    </div>
-    {% endif %}
- 
-
-</div>
-</div>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
